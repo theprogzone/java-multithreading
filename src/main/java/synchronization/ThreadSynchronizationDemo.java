@@ -19,14 +19,14 @@ public class ThreadSynchronizationDemo {
 
     public static void main(String[] args) {
         Thread threadOne = new Thread(() -> {
-            for (int i=0; i<10000; i++) {
+            for (int i = 0; i < 10000; i++) {
                 counterOne++;
                 increment();
             }
         });
 
         Thread threadTwo = new Thread(() -> {
-            for (int i=0; i<10000; i++) {
+            for (int i = 0; i < 10000; i++) {
                 counterOne++;
                 increment();
             }
@@ -42,7 +42,7 @@ public class ThreadSynchronizationDemo {
             throw new RuntimeException(e);
         }
 
-        System.out.println("Counter one value: "+counterOne);
-        System.out.println("Counter two value: "+counterTwo);
+        System.out.println("Counter one value: " + counterOne);
+        System.out.println("Counter two value: " + counterTwo);
     }
 }
